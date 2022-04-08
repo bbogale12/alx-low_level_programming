@@ -9,14 +9,16 @@ int main(void)
 {
 char alphabet;
 
-for(alphabet == 'q'
+for(alphabet == 'q'; alphabet <= 'z'; alphabet++)
+{
+if (alphabet == 'q')
 continue;
 
 else if (alphabet == 'e')
 continue;
 
 putchar(alphbet);
-)
+}
 
 putchar('\n');
 
