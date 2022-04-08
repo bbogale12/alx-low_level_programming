@@ -17,8 +17,8 @@ if (c !=9)
 putchar(',');
 putchar(' ');
 }
-c++
+c++;
 }
-purchar('\n');
+putchar('\n');
 return (0);
 }
