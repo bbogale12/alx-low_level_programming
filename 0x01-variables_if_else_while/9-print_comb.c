@@ -1,31 +1,23 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - main block
  * 
  * Return: Always 0 (Success/correct)
  */
-
 int main(void)
-
 {
-int number;
+int c = 0;
 
-for (number = 48; number <= 57; number++)
+while (c < 10)
 {
-putchar(number);
-
-if (number == 57)
+putchar(48 + c);
+if (c != 9)
 {
-break;
-}
-
 putchar(',');
 putchar(' ');
 }
-
+c++;
+}
 putchar('\n');
-
 return (0);
-
-
 }
