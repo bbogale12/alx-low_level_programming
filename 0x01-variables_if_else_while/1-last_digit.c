@@ -22,6 +22,3 @@ printf("Last digit of %d is %d %s\n", n, n % 10,
 
 return (0);
 }
-
-
-
