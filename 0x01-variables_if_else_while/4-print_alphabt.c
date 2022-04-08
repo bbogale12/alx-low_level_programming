@@ -9,7 +9,7 @@ int main(void)
 {
 char alphabet;
 
-for(alphabet == 'q'; alphabet <= 'z'; alphabet++)
+for (alphabet == 'q'; alphabet <= 'z'; alphabet++)
 {
 if (alphabet == 'q')
 continue;
@@ -17,7 +17,7 @@ continue;
 else if (alphabet == 'e')
 continue;
 
-putchar(alphbet);
+putchar(alphabet);
 }
 
 putchar('\n');
