@@ -1,8 +1,8 @@
-#include <main.h>
+#include "main.h"
 /**
  * main_main block
- * Description:print -putchar in a new line
- * Return:this program returns zero
+ * Description: print -putchar in a new line
+ * Return: this program returns zero
  */
 int main(void)
 {
