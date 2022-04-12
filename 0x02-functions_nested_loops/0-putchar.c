@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * main_main block
- * Description: print -putchar in a new line
- * Return: this program returns zero
+ * main - entry block
+ * @void: no argument
+ * Return: 0
  */
+
 int main(void)
 {
 _putchar('_');
