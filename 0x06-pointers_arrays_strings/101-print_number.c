@@ -1,23 +1,22 @@
 #include "main.h"
 /**
-* leet - function that encode a string
-*@str:string that will be encoded
-*Return:returns encoded string
+* print_number - prints an integer
+*@n:integer to be printed
+*
 */
-
-char *leet(char *str)
+void print_number(int n)
 {
-	int index1 = 0, index2;
-	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	unsigned int num = n;
 
-	while (str[++index1])
+	if (n < 0)
 	{
-		for (index2 = 0; index2 <= 7; index2++)
-		{
-			if (str[index1] == leet[index2] ||
-			 str[index1] - 32 == leet[index2])
-				str[index1] = index2 + '0';
-		}
+		_putchar('-');
+		num = -num;
 	}
-	return (str);
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
+
