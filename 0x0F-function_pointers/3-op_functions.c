@@ -1,6 +1,6 @@
 /*
  * File: 3-op_functions.c
- * Auth: Brennan D Baraban
+ * Auth: bbogale12
  */
 
 #include "3-calc.h"
