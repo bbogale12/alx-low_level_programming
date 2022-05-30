@@ -38,3 +38,4 @@ int append_text_to_file(const char *filename, char *text_content)
 	close(fd);
 	/*returning 1 for success, but may need additional error checks*/
 	return (1);
+}
