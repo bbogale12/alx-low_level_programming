@@ -1,47 +1,47 @@
 #include "lists.h"
 /**
-* delete_dnodeint_at_index - function
-* @head: double poitner to first node in lnkd list
-* @index: index to where to delete
-*
-* Description: function that deletes the node at nth of a lnkd list
-* Return: 1 Success, -1 Fail
-*/
+ * delete_dnodeint_at_index - deletes the node at index index of a list
+ * @head: pointer to the head pointer of the list
+ * @index: is the index of the node that should be deleted
+ * Return: 1 if it succeeded, -1 if it failed
+ * Description: function that deletes the node at index index of a list
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp, *temp2;
-	unsigned int idx = 0;
+	dlistint_t *del;
+	unsigned int i = 0;
 
-	if (*head == NULL)
-	{
+	if (!*head)
 		return (-1);
-	}
+	del = *head;
 	if (index == 0)
 	{
-		temp = (*head)->next;
-		temp->prev = NULL;
-		/*free(temp);*/
-		return (1);
-	}
-	temp = *head;
-	while (temp != NULL)
-	{
-		if (idx == index)
+		if (del->next)
 		{
-			temp2 = temp->next;
-			temp2->prev = temp->prev->prev;
-			temp = temp2->prev;
-			temp->next = temp2->next->next;
-			/*free(temp2);*/
+			*head = del->next;
+			del->next->prev = NULL;
+		}
+		else
+		{
+			*head = NULL;
 			return (1);
 		}
-		temp = temp->next;
-		idx++;
 	}
-	if (idx < index)
-		return (-1);
-	if (temp->next == NULL)
-		return (1);
-
-	return (-1);
+	else
+	{
+		while (i < index)
+		{
+			i++;
+			if ((del->next == NULL) && (i != (index - 2)))
+				return (-1);
+			del = del->next;
+		}
+		del->prev->next = del->next;
+		if (del->next)
+			del->next->prev = del->prev;
+		else
+			del->prev->next = NULL;
+	}
+	free(del);
+	return (1);
 }
